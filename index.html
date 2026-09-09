@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>紫禁城 · 体素沙盘</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<div id="toolbar">
+  <div id="title"><span class="t1">紫禁城</span><span class="t2">体素沙盘</span></div>
+  <button id="btnGod" class="tb active">🗺 上帝视角 <kbd>1</kbd></button>
+  <button id="btnFP" class="tb">🚶 第一人称 <kbd>2</kbd></button>
+  <button id="btnFly" class="tb" style="display:none">🕊 飞行 <kbd>F</kbd></button>
+  <button id="btnNight" class="tb">🌙 昼夜 <kbd>N</kbd></button>
+  <button id="btnLabels" class="tb active">🏷 标注 <kbd>L</kbd></button>
+  <button id="btnPanel" class="tb">📜 景点 <kbd>M</kbd></button>
+  <button id="btnHelp" class="tb">❓ 帮助 <kbd>H</kbd></button>
+</div>
+
+<div id="fps"></div>
+<div id="compass"><span id="compassArrow">▲</span>N</div>
+
+<div id="labels"></div>
+<div id="tooltip"></div>
+
+<div id="panel" class="hidden">
+  <div class="ptitle">🏛 景点名录 · 点击飞越</div>
+  <div id="panelList"></div>
+</div>
+
+<div id="hint"></div>
+
+<div id="lockHint"><div>鼠标已解锁<br><br>点击画面重新锁定视角</div></div>
+
+<div id="overlay">
+  <div id="ovBox">
+    <h1>紫禁城 <span>·</span> 体素沙盘</h1>
+    <p class="sub">THE FORBIDDEN CITY · VOXEL SANDBOX</p>
+    <p class="desc">
+      以体素方块逐殿复原的明清紫禁城:自天安门、端门、午门而入,过内金水桥,经太和门,登三台之上的太和殿,
+      再穿乾清门与后三宫,直至御花园、神武门。东西六宫、宁寿宫、慈宁宫、角楼与护城河,悉数在列;
+      太庙、社稷坛分列城外东西。
+    </p>
+    <div class="ctrl">
+      <div><b>🗺 上帝视角</b> — 拖拽旋转 · 滚轮缩放 · 右键平移 · 悬停看介绍 · 点击建筑飞越</div>
+      <div><b>🚶 第一人称</b> — WASD 行走 · 空格跳跃 · Shift 奔跑 · <b>F</b> 切换飞行 · 亲身穿越门洞、登临丹陛</div>
+      <div><b>🌙 N</b> 昼夜 · <b>🏷 L</b> 标注 · <b>📜 M</b> 景点名录 · <b>1/2</b> 切换视角</div>
+    </div>
+    <button id="btnStart">入 城</button>
+    <div id="statLine"></div>
+  </div>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
